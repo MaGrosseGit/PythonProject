@@ -67,7 +67,9 @@ class GenerateType:
 	def PlaceObject(self, obj,target):
 		obj.location = target.location
 		obj.rotation_euler = target.rotation_euler  
-		obj.dimensions = target.scale *2
+		maxDim = min(target.scale )*2
+		multiplicator = maxDim / max(obj.dimensions)
+		obj.dimensions = obj.dimensions *multiplicator
 		
 	def PlaceAllObjects(self):
 		for i in range(0,self.nbtarget) :
