@@ -4,7 +4,7 @@ tagWindow = "Window"
 tagWindowAsset = "Cube001"
 tagDoor = "Door"
 
-class AssetType:
+class GenerateType:
 	"""Classe pour chaque type d'asset:
 	- La liste d'asset disponible
 	- La liste d'empty pour les placer
@@ -41,8 +41,11 @@ class AssetType:
 	
 
 
-windows = AssetType(tagWindow)
+windows = GenerateType(tagWindow)
 windows.PlaceAllObjects()
+
+doors = GenerateType(tagDoor)
+doors.PlaceAllObjects()
 
 
 
